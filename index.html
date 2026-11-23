@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f8ff">
+    <title>Calculadora científica | Club de estudio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="calculator" aria-labelledby="titulo">
+      <header class="calculator__header">
+        <p class="eyebrow">Club de estudio</p>
+        <h1 id="titulo">Calculadora científica</h1>
+        <p class="intro">Ingresá dos números y elegí una operación.</p>
+      </header>
+
+      <form id="calculadora" novalidate>
+        <div class="fields">
+          <div class="field">
+            <label for="numero-a">Primer número</label>
+            <input id="numero-a" name="numero-a" type="number" step="any" inputmode="decimal" placeholder="Ingresar primer número" aria-describedby="mensaje-error">
+          </div>
+          <div class="field">
+            <label for="numero-b">Segundo número</label>
+            <input id="numero-b" name="numero-b" type="number" step="any" inputmode="decimal" placeholder="Ingresar segundo número" aria-describedby="mensaje-error">
+          </div>
+        </div>
+
+        <section class="operations" aria-label="Operaciones">
+          <div class="operations__basic">
+            <button class="button button--primary" type="button" data-operation="sumar">Sumar</button>
+            <button class="button button--primary" type="button" data-operation="restar">Restar</button>
+            <button class="button button--primary" type="button" data-operation="multiplicar">Multiplicar</button>
+            <button class="button button--primary" type="button" data-operation="dividir">Dividir</button>
+          </div>
+          <div class="operations__advanced">
+            <button class="button button--advanced" type="button" disabled>Potencia</button>
+            <button class="button button--advanced" type="button" disabled>Raíz cuadrada</button>
+          </div>
+        </section>
+
+        <section class="result-section" aria-labelledby="resultado-titulo">
+          <h2 id="resultado-titulo">Resultado</h2>
+          <output id="resultado" class="result" aria-live="polite" aria-atomic="true">—</output>
+          <p id="mensaje-error" class="error" role="alert" aria-live="assertive"></p>
+        </section>
+
+        <div class="actions">
+          <button id="limpiar" class="button button--clear" type="reset">Limpiar</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
