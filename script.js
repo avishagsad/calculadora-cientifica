@@ -63,6 +63,13 @@ form.addEventListener("click", (event) => {
   if (boton) calcular(boton.dataset.operation);
 });
 
+form.addEventListener("keydown", (event) => {
+  if (event.key === "Enter" && event.target.matches("input")) {
+    event.preventDefault();
+    calcular("sumar");
+  }
+});
+
 form.addEventListener("reset", () => {
   resultado.textContent = "—";
   mensajeError.textContent = "";
