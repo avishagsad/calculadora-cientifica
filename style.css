@@ -87,7 +87,8 @@ input:focus-visible, button:focus-visible { outline: 3px solid #f3a6b8; outline-
 .button:not(:disabled):active { transform: translateY(1px); }
 .button--primary { color: #fff; background: var(--primary); box-shadow: 0 7px 18px rgb(111 61 125 / 14%); }
 .button--primary:hover { background: var(--primary-dark); }
-.button--advanced { color: #fff; background: var(--coral); cursor: not-allowed; opacity: .7; }
+.button--advanced { color: #fff; background: var(--coral); box-shadow: 0 7px 18px rgb(187 63 104 / 12%); }
+.button--advanced:hover { background: #cf7186; }
 .result-section { margin-top: 34px; }
 .result-section h2 { margin: 0 0 10px; }
 .result { min-height: 65px; padding: 14px; display: grid; place-items: center; overflow-wrap: anywhere; border: 1px solid var(--border); border-radius: 14px; background: #fffdfd; color: var(--primary-dark); font-size: clamp(1.5rem, 6vw, 1.8rem); font-weight: 750; text-align: center; }

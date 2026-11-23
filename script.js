@@ -11,29 +11,43 @@ const operaciones = {
   restar: (a, b) => a - b,
   multiplicar: (a, b) => a * b,
   dividir: (a, b) => a / b,
+  potencia: (a, b) => a ** b,
+  raiz: (a) => Math.sqrt(a),
 };
 
 function calcular(nombreOperacion) {
   mensajeError.textContent = "";
 
-  if (numeroA.value.trim() === "" || numeroB.value.trim() === "") {
+  const usaSoloPrimerNumero = nombreOperacion === "raiz";
+
+  if (numeroA.value.trim() === "" || (!usaSoloPrimerNumero && numeroB.value.trim() === "")) {
     resultado.textContent = "—";
-    mensajeError.textContent = "Completá ambos campos para realizar el cálculo.";
+    mensajeError.textContent = usaSoloPrimerNumero
+      ? "Completá el primer campo para calcular la raíz."
+      : "Completá ambos campos para realizar el cálculo.";
     return;
   }
 
   const a = numeroA.valueAsNumber;
   const b = numeroB.valueAsNumber;
 
-  if (!Number.isFinite(a) || !Number.isFinite(b)) {
+  if (!Number.isFinite(a) || (!usaSoloPrimerNumero && !Number.isFinite(b))) {
     resultado.textContent = "—";
-    mensajeError.textContent = "Ingresá números válidos en ambos campos.";
+    mensajeError.textContent = usaSoloPrimerNumero
+      ? "Ingresá un número válido en el primer campo."
+      : "Ingresá números válidos en ambos campos.";
     return;
   }
 
   if (nombreOperacion === "dividir" && b === 0) {
     resultado.textContent = "—";
     mensajeError.textContent = "No se puede dividir por cero.";
+    return;
+  }
+
+  if (nombreOperacion === "raiz" && a < 0) {
+    resultado.textContent = "—";
+    mensajeError.textContent = "No se puede calcular la raíz cuadrada de un número negativo.";
     return;
   }
 
