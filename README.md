@@ -57,9 +57,8 @@ La pre-entrega requiere al menos tres prompts iterativos y un ejemplo real de er
 | Versión | Cambios | Razón |
 | --- | --- | --- |
 | v1 | Interfaz y cuatro operaciones básicas; potencia y raíz visibles pero deshabilitadas. | Primera versión basada en el sketch. |
-| v2 | Paleta lavanda, rosa y coral; formas orgánicas, bordes suaves y título editorial. | Darle al proyecto una identidad más femenina y artística. |
-| v3 | Potencia, raíz cuadrada y validaciones para raíces negativas y resultados no finitos. | Completar las funciones científicas exigidas por la pre-entrega. |
-| v4 | Enter desde los campos ejecuta la suma sin recargar la página. | Corregir el error de teclado observado durante las pruebas. |
+| v2 | Potencia, raíz cuadrada y validaciones para raíces negativas y resultados no finitos. | Completar las funciones científicas exigidas por la pre-entrega. |
+| v3 | Enter desde los campos ejecuta la suma sin recargar la página. | Corregir el error de teclado observado durante las pruebas. |
 
 ---
 
