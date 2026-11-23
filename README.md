@@ -35,16 +35,10 @@ Actuá como desarrollador web. Implementá la primera versión de una calculador
 **Prompt 2:**
 
 ```txt
-Hacé un diseño más femenino y artsy.
-```
-
-**Prompt 3:**
-
-```txt
 Activá las funciones científicas del sketch. Potencia debe calcular el primer número elevado al segundo. Raíz cuadrada debe usar solamente el primer número y no exigir el segundo campo. Validá la raíz de números negativos y cualquier resultado no finito con mensajes claros. Conservá las cuatro operaciones básicas, limpiar, accesibilidad, diseño adaptable y la estética femenina y artsy de la versión actual.
 ```
 
-**Prompt 4 — corrección:**
+**Prompt 3 — corrección:**
 
 ```txt
 Al completar los dos campos y presionar Enter, la calculadora no realiza ninguna operación y el resultado permanece en “—”. Corregilo para que Enter desde cualquiera de los campos ejecute la suma, sin recargar la página y conservando el comportamiento de los demás botones.
